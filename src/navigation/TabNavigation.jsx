@@ -30,6 +30,7 @@ export const TabNavigation = () => {
         options={{
           tabBarLabel: '',
           tabBarIcon: () => <PokeballButton />,
+          headerShown: false,
         }}
       />
       <Tab.Screen

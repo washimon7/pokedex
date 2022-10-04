@@ -10,7 +10,7 @@ export const RootNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="MainTabs" component={TabNavigation} />
-        <Stack.Screen name="Pokemon" component={PokemonDetailsScreen} />
+        <Stack.Screen name="PokemonDetails" component={PokemonDetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
