@@ -3,3 +3,4 @@ export { FavoriteScreen } from './FavoriteScreen';
 export { AccountScreen } from './AccountScreen';
 
 export { PokemonDetailsScreen } from './PokemonDetailsScreen';
+export { SignInScreen } from './auth/SignInScreen';

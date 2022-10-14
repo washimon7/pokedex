@@ -44,6 +44,7 @@ export const TabNavigation = () => {
             ) : (
               <MatIcon name="account-outline" color={color} size={size} />
             ),
+          title: 'Mi cuenta',
         }}
       />
     </Tab.Navigator>

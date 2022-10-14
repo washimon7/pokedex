@@ -31,7 +31,7 @@ export const useGetPokemon = pokemonId => {
         image: pokemon.sprites.other['official-artwork'].front_default,
         stats: pokemon.stats,
       });
-      console.log(pokemon.stats);
+      // console.log(pokemon.stats);
     }
     setIsLoading(false);
   };
