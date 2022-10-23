@@ -1,11 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
-import { useContext } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { AuthContext } from '../app/AuthContext';
+import { Button, StyleSheet, View } from 'react-native';
+import { UserData } from '../components/account/UserData';
+import { useAuth } from '../hooks/useAuth';
 
 export const AccountScreen = () => {
   const navigation = useNavigation();
-  const { auth } = useContext(AuthContext);
+  const { auth } = useAuth();
 
   const goToSignIn = () => {
     navigation.navigate('SignIn');
@@ -14,7 +14,7 @@ export const AccountScreen = () => {
   return (
     <View style={styles.container}>
       {auth?.signedInUser ? (
-        <Text>Panel del usuario</Text>
+        <UserData user={auth.signedInUser} />
       ) : (
         <View style={styles.btnSignIn}>
           <Button onPress={goToSignIn} title="Iniciar sesión" />

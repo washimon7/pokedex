@@ -1,14 +1,14 @@
 import { useNavigation } from '@react-navigation/native';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Keyboard, ToastAndroid } from 'react-native';
-import { AuthContext } from '../app/AuthContext';
 import { signInService } from '../services/signInService';
+import { useAuth } from '../hooks/useAuth';
 
 export const useSignIn = () => {
   const navigation = useNavigation();
   const initialValues = { username: '', password: '' };
   const [hasSignInErrors, setHasSignInErrors] = useState(false);
-  const { justSignedIn } = useContext(AuthContext);
+  const { justSignedIn } = useAuth();
 
   useEffect(() => {
     if (hasSignInErrors) {
@@ -26,7 +26,7 @@ export const useSignIn = () => {
     const response = await signInService(userForm);
 
     if (response) {
-      console.log({ user: response });
+      // console.log({ user: response });
       justSignedIn(response);
       navigation.navigate('MainTabs', { screen: 'Account', replace: true });
     } else {
