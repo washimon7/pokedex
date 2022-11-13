@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { useSignIn } from '../../hooks/useSignIn';
+import { useSignIn } from '../../hooks';
 import { validateForm } from '../../utils/validateForm';
 
 export const SignInScreen = () => {

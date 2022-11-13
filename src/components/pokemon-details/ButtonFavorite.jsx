@@ -1,6 +1,5 @@
-import { StyleSheet, View } from 'react-native';
-import { TouchableNativeFeedback } from 'react-native-gesture-handler';
-import { usePokedex } from '../../hooks/usePokedex';
+import { StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
+import { usePokedex } from '../../hooks';
 import { DynamicIconFavorite } from '../layout/DynamicIconFavorite';
 
 export const ButtonFavorite = () => {
@@ -18,13 +17,13 @@ export const ButtonFavorite = () => {
   };
 
   return (
-    <TouchableNativeFeedback
+    <TouchableWithoutFeedback
       onPress={isFavoritePokemon ? removePokemonLikes : likePokemon}
     >
       <View styles={styles.container}>
         <DynamicIconFavorite touched={isFavoritePokemon} />
       </View>
-    </TouchableNativeFeedback>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -33,7 +32,6 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     padding: 4,
-    backgroundColor: 'black',
     marginRight: 8,
   },
 });

@@ -19,7 +19,7 @@ export const useSignIn = () => {
     }
   }, [hasSignInErrors]);
 
-  const doSignIn = async userForm => {
+  const doSignIn = async (userForm) => {
     Keyboard.dismiss();
     setHasSignInErrors(false);
 

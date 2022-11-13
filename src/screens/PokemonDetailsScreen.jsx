@@ -1,11 +1,13 @@
-import PropTypes from 'prop-types';
-import { useGetPokemon } from '../hooks/useGetPokemon';
-import { Spinner } from '../components/layout/Spinner';
-import { DetailsHeader } from '../components/pokemon-details/DetailsHeader';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { DetailsTypes } from '../components/pokemon-details/DetailsTypes';
 import { Text } from 'react-native';
-import { DetailsStats } from '../components/pokemon-details/DetailsStats';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import PropTypes from 'prop-types';
+import { useGetPokemon } from '../hooks';
+import {
+  Spinner,
+  DetailsHeader,
+  DetailsTypes,
+  DetailsStats,
+} from '../components';
 
 export const PokemonDetailsScreen = ({ route }) => {
   const { pokemonId } = route.params;

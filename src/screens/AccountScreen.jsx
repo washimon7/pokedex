@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { Button, StyleSheet, View } from 'react-native';
-import { UserData } from '../components/account/UserData';
-import { useAuth } from '../hooks/useAuth';
+import { UserData } from '../components';
+import { useAuth } from '../hooks';
 
 export const AccountScreen = () => {
   const navigation = useNavigation();

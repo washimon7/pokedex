@@ -1,5 +1,5 @@
 export { PokedexScreen } from './PokedexScreen';
-export { FavoriteScreen } from './FavoriteScreen';
+export { FavoritesScreen } from './FavoritesScreen';
 export { AccountScreen } from './AccountScreen';
 
 export { PokemonDetailsScreen } from './PokemonDetailsScreen';

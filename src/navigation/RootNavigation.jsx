@@ -2,8 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { PokemonDetailsScreen, SignInScreen } from '../screens';
 import { TabNavigation } from './TabNavigation';
-import { ButtonFavorite } from '../components/pokemon-details/ButtonFavorite';
-import { useAuth } from '../hooks/useAuth';
+import { ButtonFavorite } from '../components';
+import { useAuth } from '../hooks';
 
 const Stack = createStackNavigator();
 
@@ -33,7 +33,7 @@ export const RootNavigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ title: 'Mi Cuenta' }}
+          options={{ title: 'Iniciar sesión' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

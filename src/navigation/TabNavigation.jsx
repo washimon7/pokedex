@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MatIcon from '@expo/vector-icons/MaterialCommunityIcons';
-import { AccountScreen, FavoriteScreen, PokedexScreen } from '../screens';
+import { AccountScreen, FavoritesScreen, PokedexScreen } from '../screens';
 import { PokeballButton } from '../components';
 
 const Tab = createBottomTabNavigator();
@@ -12,8 +12,8 @@ export const TabNavigation = () => {
       screenOptions={{ tabBarLabelStyle: { fontSize: 12, paddingBottom: 4 } }}
     >
       <Tab.Screen
-        name="Favorite"
-        component={FavoriteScreen}
+        name="Favorites"
+        component={FavoritesScreen}
         options={{
           tabBarLabel: 'Favoritos',
           tabBarIcon: ({ color, size, focused }) =>
@@ -22,6 +22,7 @@ export const TabNavigation = () => {
             ) : (
               <MatIcon name="cards-heart-outline" color={color} size={size} />
             ),
+          headerTitle: 'Favoritos',
         }}
       />
       <Tab.Screen
