@@ -22,6 +22,11 @@ export const pokedexReducer = (state, action) => {
           (item) => item.id !== action.payload
         ),
       };
+    case 'cleaned-favorite-pokemons':
+      return {
+        ...state,
+        favoritePokemons: [],
+      };
     default:
       return state;
   }

@@ -3,10 +3,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { PokemonDetailsScreen, SignInScreen } from '../screens';
 import { TabNavigation } from './TabNavigation';
 import { ButtonFavorite } from '../components/pokemon-details/ButtonFavorite';
+import { useAuth } from '../hooks/useAuth';
 
 const Stack = createStackNavigator();
 
 export const RootNavigation = () => {
+  const { auth } = useAuth();
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -21,7 +24,7 @@ export const RootNavigation = () => {
           options={{
             headerTransparent: true,
             headerTitle: '',
-            headerRight: ({}) => <ButtonFavorite />,
+            headerRight: ({}) => auth?.signedInUser && <ButtonFavorite />,
             headerRightContainerStyle: {
               paddingRight: 12,
             },

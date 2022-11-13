@@ -9,6 +9,7 @@ export const usePokedex = () => {
     justUnfocusedPokemon,
     justLikedPokemon,
     justRemovedPokemonLikes,
+    justCleanedFavoritePokemons,
   } = useContext(PokedexContext);
 
   return {
@@ -18,5 +19,6 @@ export const usePokedex = () => {
     justUnfocusedPokemon,
     justLikedPokemon,
     justRemovedPokemonLikes,
+    justCleanedFavoritePokemons,
   };
 };

@@ -38,6 +38,12 @@ const PokedexProvider = ({ children }) => {
     });
   };
 
+  const justCleanedFavoritePokemons = () => {
+    dispatch({
+      type: 'cleaned-favorite-pokemons',
+    });
+  };
+
   return (
     <PokedexContext.Provider
       value={{
@@ -47,6 +53,7 @@ const PokedexProvider = ({ children }) => {
         justUnfocusedPokemon,
         justLikedPokemon,
         justRemovedPokemonLikes,
+        justCleanedFavoritePokemons,
       }}
     >
       {children}
